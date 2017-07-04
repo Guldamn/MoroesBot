@@ -22,12 +22,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="cogs\admin.py" />
-    <Compile Include="cogs\raiderio.py" />
-    <Compile Include="DiscordBotPy.py" />
-    <Compile Include="mods\admin.py">
+    <Compile Include="cogs\armory.py" />
+    <Compile Include="cogs\raid.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="cogs\admin_mod.py">
+    <Compile Include="DiscordBotPy.py" />
+    <Compile Include="mods\admin.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="cogs\raiderio.py">

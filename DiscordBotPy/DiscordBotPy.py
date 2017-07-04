@@ -8,7 +8,8 @@ description = """Hello I am a bot written by King WeakAura I to provide some swe
 
 initial_extensions = [
     'cogs.admin',
-    'cogs.raiderio']
+    'cogs.armory',
+    'cogs.raid']
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.WARNING)
@@ -34,7 +35,8 @@ async def on_command_error(error, ctx):
 @client.event
 async def on_ready():
     print('Moroes is serving you using Discord.PY', discord.__version__)
-    print('-------------------------')
+    print('Moroes has enabled {} extensions!'.format(len(initial_extensions)))
+    print('---------------------------------------------')
 
 @client.event
 async def on_message(message):
@@ -57,5 +59,5 @@ if __name__ == '__main__':
         except Exception as e:
             print('Failed to load extension {}\n{}: {}'.format(extension, type(e).__name__, e))
 
-client.run(config['token'])
+client.run('MjkxODczMjI2NDEyNTIzNTIw.DD0C1Q.4tqLZWXSiUrH4ODrj9W9AMW1Tag')
 

@@ -9,13 +9,28 @@ class Admin:
     def __init__(self, client):
         self.client = client
 
-    @commands.command(name='shutdown', hidden=True)
-    async def shutdown(self):
-        """Shuts down the current instance of the bot"""
-        print('Test')
-        await self.client.say(discord.__version__)
-        
-        
+    @commands.command(hidden=True)
+    async def load(self, *, module : str):
+        """Loads a module."""
+        module = module.lower()
+        try:
+            self.client.load_extension(module)
+        except Exception as e:
+            await self.client.say('\N{FIRE} {}: {}'.format(type(e).__name__, e))
+        else:
+            await self.client.say('Module: **{}** is now enabled!'.format(module))
+
+    @commands.command(hidden=True)
+    async def unload(self, *, module : str):
+        """Unloads a module."""
+        module = module.lower()
+        try:
+            self.client.unload_extension(module)
+        except Exception as e:
+            await self.client.say('\N{FIRE} {}: {}'.format(type(e).__name__, e))
+        else:
+            await self.client.say('Module: **{}** is now disabled!'.format(module))
+
 
 def setup(client):
     client.add_cog(Admin(client))

@@ -7,7 +7,7 @@ import urllib3
 
 
 
-class RaiderIO:
+class Armory:
     """Commands that allow the user to interact with the Raider.IO API."""
 
     
@@ -60,4 +60,4 @@ class RaiderIO:
         
 
 def setup(client):
-    client.add_cog(RaiderIO(client))
+    client.add_cog(Armory(client))
