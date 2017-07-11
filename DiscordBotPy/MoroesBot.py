@@ -9,7 +9,8 @@ description = """Hello I am a bot written by King WeakAura I to provide some swe
 initial_extensions = [
     'cogs.admin',
     'cogs.armory',
-    'cogs.raid']
+    'cogs.icyveins',
+    'cogs.boss']
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.WARNING)

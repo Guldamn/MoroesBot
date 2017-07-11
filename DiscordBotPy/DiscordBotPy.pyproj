@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8405c34f-c09b-40cc-ba69-e69f71925f4e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>DiscordBotPy.py</StartupFile>
+    <StartupFile>MoroesBot.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,16 +23,11 @@
   <ItemGroup>
     <Compile Include="cogs\admin.py" />
     <Compile Include="cogs\armory.py" />
-    <Compile Include="cogs\raid.py">
+    <Compile Include="cogs\icyveins.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DiscordBotPy.py" />
-    <Compile Include="mods\admin.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="cogs\raiderio.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="MoroesBot.py" />
+    <Compile Include="cogs\boss.py" />
     <Compile Include="Services\JSON.py">
       <SubType>Code</SubType>
     </Compile>
@@ -40,8 +35,8 @@
   <ItemGroup>
     <Folder Include="cogs\" />
     <Folder Include="cogs\" />
+    <Folder Include="raids\" />
     <Folder Include="cogs\__pycache__\" />
-    <Folder Include="mods\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>

@@ -38,7 +38,7 @@ class Armory:
 
     @commands.command(name='armory', hidden=True)
     async def armory(self, *, query : str):
-        """Shows information from the characters armory if found"""
+        """Syntax: !armory eu draenor suurikarhu"""
         
         args = query.split(" ")
         if len(args) < 3:
